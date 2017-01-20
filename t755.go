@@ -34,5 +34,16 @@ func main() {
     population2 = populationForCity["Emerald City"]
     fmt.Println("Emerald City`s population is", population2)
 
+    //判断键是否存在
+    city := "Istanbul"
+    if population,found := populationForCity[city]; found {
+        fmt.Printf("%s`s population is %d\n", city, population)
+    }else{
+        fmt.Printf("%s`s population data is unavailable\n", city)
+    }
+
+    city = "Emeriald City"
+    _,present := populationForCity[city]
+    fmt.Printf("%q is in the map == %t\n", city, present)
 
 }
