@@ -10,12 +10,18 @@ func RemoveStringSliceCopy(slice []string, start, end int) []string {
     return result
 }
 
+func RemoveStringSlice(slice []string, start,end int) []string {
+    return append(slice[:start], slice[end:]...)
+}
+
 func main() {
     s := []string{"A","B","C","D","E","F","G"}
     x := RemoveStringSliceCopy(s,0,2) //从头部删除s[:2]
     y := RemoveStringSliceCopy(s,1,5) //从中间删除s[1:5]
     z := RemoveStringSliceCopy(s,4,len(s)) //从结尾删除s[4:]
-    fmt.Printf("%v\n%v\n%v\n%v\n", s,x,y,z)
+    k := RemoveStringSlice(s, 3,5)
+
+    fmt.Printf("%v\n%v\n%v\n%v\n%v\n", s,x,y,z,k)
 
 
 }
