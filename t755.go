@@ -29,4 +29,10 @@ func main() {
         fmt.Printf("%-10s %8d\n",city,population)
     }
 
+    population2 := populationForCity["Mumbai"]
+    fmt.Println("Mumbai`s population is", population2)
+    population2 = populationForCity["Emerald City"]
+    fmt.Println("Emerald City`s population is", population2)
+
+
 }
