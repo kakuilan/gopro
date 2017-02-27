@@ -46,4 +46,18 @@ func main() {
     _,present := populationForCity[city]
     fmt.Printf("%q is in the map == %t\n", city, present)
 
+    //删除
+    fmt.Println(len(populationForCity), populationForCity)
+    delete(populationForCity, "Shanghai")
+    fmt.Println(len(populationForCity), populationForCity)
+
+    //更新
+    populationForCity["Karachi"] = 11620000
+    fmt.Println(len(populationForCity), populationForCity)
+
+    //插入
+    populationForCity["Beijing"] = 1129000
+    fmt.Println(len(populationForCity), populationForCity)
+
+
 }
