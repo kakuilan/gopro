@@ -6,8 +6,14 @@ import (
 	"math"
 )
 
-type geometry interface {
+//内嵌接口
+type tmp interface {
 	area() float32
+}
+
+type geometry interface {
+	//	area() float32
+	tmp
 	perim() float32
 }
 
