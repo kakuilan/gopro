@@ -26,6 +26,8 @@
 *.rej
 *.so
 *.test
+*.xml
+*.json
 *~
 .*.swp
 ._*
