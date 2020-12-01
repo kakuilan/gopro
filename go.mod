@@ -1,3 +1,3 @@
-module github.com/kakuilan/gopro
+module gopro
 
 go 1.12
