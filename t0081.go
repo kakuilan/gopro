@@ -1,0 +1,27 @@
+//big包
+package main
+
+import (
+	"fmt"
+	"math"
+	"math/big"
+)
+
+func main() {
+	im := big.NewInt(math.MaxInt64)
+	in := im
+	io := big.NewInt(2021)
+	ip := big.NewInt(1)
+
+	ip.Mul(im, in).Add(ip, im).Div(ip, io)
+	fmt.Printf("Big Int: %v\n", ip)
+
+	rm := big.NewRat(math.MaxInt64, 2021)
+	rn := big.NewRat(-1900, math.MaxInt64)
+	ro := big.NewRat(19, 56)
+	rp := big.NewRat(1111, 2222)
+	rq := big.NewRat(1, 1)
+	rq.Mul(rm, rn).Add(rq, ro).Mul(rq, rp)
+	fmt.Printf("Big Rat: %v\n", rq)
+
+}
